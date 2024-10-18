@@ -1,0 +1,29 @@
+def main():
+    rainfall = []
+    for month in range(1, 13):
+        while True:
+            try:
+                rain = float(input("Enter total rain for every month separately : "))
+                if rain < 0:
+                    raise ValueError
+                rainfall.append(rain)
+                break
+            except ValueError:
+                print("Enter a valid number.")
+    total_rain = sum(rainfall)
+    average_rain = total_rain / 12
+    most_rain = max(rainfall)
+    least_rain = min(rainfall)
+    most_month = rainfall.index(most_rain) + 1
+    least_month = rainfall.index(least_rain) + 1
+
+    print("The total amount of rain for the year is ", total_rain)
+    print("The average rainfall per month is ", average_rain)
+    print("The month with the highest rainfall was", most_month)
+    print("The month with the least rain is", least_month)
+
+main()
+
+# Matthew Beekman
+# Program 1
+# 10/17/2024
