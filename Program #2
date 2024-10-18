@@ -1,0 +1,11 @@
+list_of_numbers = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+n = 12
+def larger_than_n(numbers, n):
+    for number in numbers:
+        if number > n:
+            print(number)
+larger_than_n(list_of_numbers,n)
+
+# Matthew Beekman
+# Program 2
+# 10/17/2024
