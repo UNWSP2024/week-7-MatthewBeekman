@@ -1,0 +1,19 @@
+def main():
+    data_list = []
+    while True:
+        year = input("Enter Year (to stop enter done): ")
+        if year.lower() == 'done':
+            break
+        state = input("Enter state name: ")
+        population = int(input("Enter population: "))
+        data_list.append([year, state, population])
+    year_wanted = input("Enter year wanted for population sum: ")
+    total_population = sum(population[2] for population in data_list if population[0] == year_wanted)
+    print(f"Total population of the year {year_wanted}: {total_population}")
+
+main()
+
+# Matthew Beekman
+# Program 3
+# 10/17/2024
+
